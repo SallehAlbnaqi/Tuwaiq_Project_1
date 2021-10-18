@@ -50,6 +50,18 @@ body {
   margin: 10px;
 }
 
+#wrap {
+  margin: 0;
+  text-align: center;
+}
+
+#heander {
+  background-color: purple;
+}
+
+h2 {
+  color: khaki;
+}
 #paragraph {
   height: 400px;
   width: 500px;
