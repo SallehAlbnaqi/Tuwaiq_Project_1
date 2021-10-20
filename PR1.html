@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,17 +9,36 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div>
+    <div id="mainDiv">
+      <p>Here are some discounts</p>
+      <hr />
       <center>
-        <img src="../تيشيرت2" alt="" />
+        <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIvPpuugfBXmPxiZ2X6BvVHPPPanqrQPWWVA&usqp=CAU" alt="" />
+        <h3>قميص حصري</h3>
         <figcaption class="figcaption">20.00$</figcaption>
         <br />
         <button class="buy">Buy</button>
+      </div>
+      <div>
+        </center>
         <h3>تيشيرت بطباعة صور : شي ان SHEIN</h3>
         <h3>اشتر 2 واحصل على الثالث مجانا</h3>
-        <img src="../تيشيرت 1" alt="" />
-      </center>
-    </div>
-    <script src="PR3.html"></script>
+        <img src="data:image/jpeg;base64,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" alt="" />
+      </div>
+      
+      
+      <div id="mainContainer">hananananananananananana</div>
+
+      <input type="text" placeholder="Enter img" id="img" />
+      <input type="text" placeholder="Enter The Price" id="price" />
+      <input type="text" placeholder="Enter The Size" id="Size" />
+      <button id="btn" onclick="addTisshrt()">Add</button>
+      <button id="hideBtn" onclick="hideHandler()">Hide Button</button>
+      <button id="showBtn" onclick="showHandler()">Show Button</button>
+  
+
+
+    <script src="Project.js"></script>
   </body>
 </html>
